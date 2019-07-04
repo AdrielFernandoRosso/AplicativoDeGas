@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGas.Views.Entrar">
+    <ContentPage.Content>
+
+        <StackLayout BackgroundColor="#9ca2a3">
+            <StackLayout BackgroundColor="Black">
+                <Label Text="Faca seu login" Font="16" FontAttributes="Bold" TextColor="White"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Entry x:Name="EntUsuario" Placeholder="Usuario" BackgroundColor="White"/>
+                <Entry x:Name="EntSenha" Placeholder="Senha" IsPassword="true" BackgroundColor="White"/>
+                <Button x:Name="btEntrar" Clicked="Btentrar_Clicked" Text="Entrar" TextColor="Red"/>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

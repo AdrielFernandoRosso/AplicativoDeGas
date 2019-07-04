@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGas.Views.Notificacao">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#9ca2a3">
+            
+            <StackLayout BackgroundColor="#1c1b1b">
+                <Label Text="Dados para Notificacao" Font="20" TextColor="White" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+            </StackLayout>
+            
+            <Label Text="Informacoes da notificacao atual" TextColor="#969a9b" Font="14" BackgroundColor="Black"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label Text="Quantidade de bocas:"/>
+                <Label x:Name="lblInfQuantidadeBocas" TextColor="Red" Text="0" Font="14"/>
+                <Label Text="Quantidade de horas:"/>
+                <Label x:Name="lblInfHoras" Text="0" TextColor="Red" Font="14"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label Text="Proxima troca de gas DIA:" Font="14"/>
+                <Label x:Name="lblInfProximaTrocaData" TextColor="Red" Text="00/00/0000" Font="14"/>
+            </StackLayout>
+
+
+            <Label Text="Quantidade bocas de chamas ultizadas" TextColor="#969a9b" Font="14" BackgroundColor="Black"/>
+            <Entry x:Name="entQuantidade" Placeholder="Quantidade" BackgroundColor="White"/>
+            
+            <Label Text="Horas diarias de uma boca de chama" TextColor="#969a9b" Font="14" BackgroundColor="Black"/>
+            <Entry x:Name="entHoras" Placeholder="Horas" BackgroundColor="White"/>
+            
+            <Label Text="Tipo de botijao" TextColor="#969a9b" Font="14" BackgroundColor="Black"/>
+            <Picker Title="Botijao" x:Name="PikerBotijao" SelectedIndexChanged="SelecionaItemBotijao_Cliked" BackgroundColor="White"/>
+            
+            <Label Text="Calcular nova troca de Gas" TextColor="#969a9b" Font="14" BackgroundColor="Black"/>
+            <Label x:Name="lblDias" Text="00/00/0000" Font="14" HorizontalOptions="CenterAndExpand"/>
+            <Button Text="Calcular" Clicked="BtCalcular_Clicked" TextColor="Red"/>
+            
+            <Label Text="Salvar para receber notificacao" TextColor="#969a9b" Font="14" BackgroundColor="Black"/>
+            <Button Text="Salvar" Clicked="BtSalvar_Clicked" TextColor="Red"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

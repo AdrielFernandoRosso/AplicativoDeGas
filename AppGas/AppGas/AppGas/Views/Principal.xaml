@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGas.Views.Principal">
+    <MasterDetailPage.Master>
+        <ContentPage Padding="5" Title="≡" BackgroundColor="#606566">
+
+            <StackLayout>
+                
+                <StackLayout x:Name="StkUsuario" IsVisible="False">
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" BackgroundColor="Black" >
+                        <Label Text="Usuario" Font="14" TextColor="#969a9b"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <!--<Image x:Name="imgUsuario" WidthRequest="40" HeightRequest="40" />-->
+
+                        <StackLayout Orientation="Vertical" Padding="10">
+                            <Label x:Name="lblUsuario" Text="Usuario"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" Padding="10">
+                            <Label Text="Atualizar" Font="12" TextColor="Black"/>
+                            <ImageButton Source="Loading.png" Clicked="BtAtualizar_Clicked" WidthRequest="40" HeightRequest="40" BackgroundColor="#565a5b"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Fill" BackgroundColor="Black" >
+                    <Label Text="Botoes de navegacao" Font="14" TextColor="#969a9b"/>
+                </StackLayout>
+
+                <!--<Image Source="" Grid.Column="1" Grid.Row="1" BackgroundColor="Black"/>-->
+                <Button x:Name="btEntrar" Clicked="BotaoEntrar_Clicked" Text="Entrar" HorizontalOptions="FillAndExpand" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" Font="14"/>
+
+                <Button x:Name="btCadastrar" Clicked="BotaoCadastrar_Cliked" Text="Cadastrar" HorizontalOptions="FillAndExpand"  BackgroundColor="White" TextColor="Black" FontAttributes="Bold" Font="14"/>
+
+                <Button x:Name="btCarrinho" Clicked="BotaoCarrinho_Clicked" IsVisible="False" Text="Carrinho" HorizontalOptions="FillAndExpand" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" Font="14"/>
+
+                <Button x:Name="btPedido" Clicked="BotaoPedido_Clicked" IsVisible="False" Text="Pedidos" HorizontalOptions="FillAndExpand" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" Font="14"/>
+                
+                <Button x:Name="btNotificacao" Clicked="BotaoNotificacao_Clicked" IsVisible="False" Text="Notificacao" HorizontalOptions="FillAndExpand" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" Font="14"/>
+
+                <Button x:Name="btConfiguracao" Clicked="BotaoConfiguracao_Clicked" IsVisible="False" Text="Configuracao" HorizontalOptions="FillAndExpand" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" Font="14"/>
+
+                <Button x:Name="btSair" Clicked="BotaoSair_Clicked" IsVisible="False" Text="Sair" HorizontalOptions="FillAndExpand" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" Font="14"/>
+
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+
+    <MasterDetailPage.Detail>
+        <ContentPage >
+            <ContentPage.Content>
+                <StackLayout BackgroundColor="#9ca2a3">
+
+                    <Label Text="Itens da Loja" x:Name="lblLojas" Font="20" TextColor="White" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                    <StackLayout BackgroundColor="Black" HorizontalOptions="FillAndExpand">
+                        <Label Text="Adicione a seu carrinho de compras" Font="16" FontAttributes="Bold" TextColor="#969a9b" BackgroundColor="Black"/>
+                    </StackLayout>
+                    
+                    <ListView x:Name="ListaPagPrincipal" RowHeight="100" ItemSelected="SelecionaItem">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" Padding="10" BackgroundColor="White" Margin="2">
+                                        <Image Source="{Binding Imagem}"/>
+                                        <!--<Label Text="{Binding ID}"/>-->
+
+                                        <StackLayout Orientation="Vertical">
+                                            <Label Text="{Binding Descricao}" Font="20" FontAttributes="Bold" TextColor="Black"/>
+                                            <Label Text="{Binding Preco, StringFormat='Preco R${0}'}" Font="12" FontAttributes="Bold" TextColor="Green"/>
+                                        </StackLayout>
+
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGas.Views.Cadastrar">
+    <ContentPage.Content>
+        <ScrollView>
+
+
+            <StackLayout Spacing="20" BackgroundColor="#9ca2a3">
+                
+                <StackLayout BackgroundColor="Black">
+                    <Label Text="Crie seu cadastro para acesso a pedidos" Font="16" FontAttributes="Bold" TextColor="White"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label Text="Dados Usuario" TextColor="#969a9b" HorizontalOptions="FillAndExpand" BackgroundColor="Black"/>
+                    <Entry x:Name="EntNome" Placeholder="Usuario(Nome)" BackgroundColor="White"/>
+                    <Entry x:Name="EntSenha" Placeholder="Senha" BackgroundColor="White"/>
+                    <Entry x:Name="EntConfirmarSenha" Placeholder="Confirmar Senha" BackgroundColor="White"/>
+                    <Entry x:Name="EntCPF" Placeholder="CPF" Keyboard="Numeric" BackgroundColor="White"/>
+                    <Entry x:Name="EntTelefone" Placeholder="Telefone" Keyboard="Numeric" BackgroundColor="White"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label Text="Endereco" TextColor="#969a9b" HorizontalOptions="FillAndExpand" BackgroundColor="Black"/>
+                    <Picker Title="Estado" x:Name="PikerEstado" SelectedIndexChanged="SelecionaItemEstado_Cliked" BackgroundColor="White"/>
+                    <Picker Title="Cidade" x:Name="PikerCidade" SelectedIndexChanged="SelecionaItemCidade_Cliked" BackgroundColor="White"/>
+                    <Entry x:Name="EntBairro" Placeholder="Bairo" Keyboard="Text" BackgroundColor="White"/>
+                    <Entry x:Name="EntNumResidencia" Placeholder="Numero Residencia" Keyboard="Numeric" BackgroundColor="White"/>
+                    <Entry x:Name="EntComplemento" Placeholder="Complemento" Keyboard="Text" BackgroundColor="White"/>
+                </StackLayout>
+
+                <Button Text="Cadastrar" Clicked="Cadastrar_Clicked" TextColor="Red" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

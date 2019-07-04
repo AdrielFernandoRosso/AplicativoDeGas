@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGas.Views.Pedidos">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#9ca2a3">
+
+        <StackLayout BackgroundColor="#1c1b1b">
+            <Label Text="Pedidos" Font="20" TextColor="White" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+        </StackLayout>
+
+
+
+        <ListView x:Name="ListaPedidos" RowHeight="100" ItemSelected="ItemSelecionado">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical" Padding="10" BackgroundColor="White" Margin="2">
+                            <Label Text="{Binding DescricaoProduto}" Font="20" FontAttributes="Bold" TextColor="Black"/>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding ValorUnitario, StringFormat='Valor Unitario R${0}'}" Font="12" FontAttributes="Bold" TextColor="Green"/>
+                                <Label Text="{Binding Quantidade, StringFormat='Quantidade Itens: {0}'}" Font="12" FontAttributes="Bold" TextColor="Red"/>
+                                <Label Text="{Binding ValorTotal, StringFormat='Valor Total R${0}'}" Font="12" FontAttributes="Bold" TextColor="Green"/>
+                            </StackLayout>
+                            <Label Text="{Binding DataEntrega, StringFormat='Data de entrega: {0}'}" Font="14" FontAttributes="Bold" TextColor="Red"/>
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

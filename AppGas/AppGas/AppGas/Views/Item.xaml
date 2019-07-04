@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGas.Views.Item">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                
+                <Image x:Name="imgBotijao" Source="{Binding Imagem}" HeightRequest="150" WidthRequest="150"/>
+                <Label x:Name="lblDescricao" Font="30" Grid.Column="0" Grid.Row="0" TextColor="Black" HorizontalOptions="CenterAndExpand"/>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="40"/>
+
+
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+
+                    </Grid.RowDefinitions>
+                    <Label Text="Preco: " Font="16" Grid.Column="1" Grid.Row="1" HorizontalOptions="End"/>
+                    <Label x:Name="lblPreco" Font="16" Grid.Column="2" Grid.Row="1" HorizontalOptions="Start" TextColor="Green"/>
+
+                    <Label Text="Quantidade: " Font="16" Grid.Column="1" Grid.Row="2" HorizontalOptions="End"/>
+                    <Label x:Name="lblQuantidade" Font="16" Grid.Column="2" Grid.Row="2" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+                </Grid>
+
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="35"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+
+                    <Button x:Name="btQtdMenos" Clicked="BtMenos_Cliked" Text="-" Grid.Column="1" Grid.Row="0" BackgroundColor="LightGray" TextColor="Black"/>
+                    <Entry x:Name="entQuantidade"  Text="1" Grid.Column="2" Grid.Row="0" TextColor="Red" HorizontalOptions="CenterAndExpand" WidthRequest="35"/>
+                    <Button x:Name="btQtdMais" Clicked="BtMais_Cliked" Text="+" Grid.Column="3" Grid.Row="0" BackgroundColor="LightGray" TextColor="Black"/>
+
+                </Grid>
+
+                <Button x:Name="btCarrinho" Clicked="BtCarrinho_Cliked" Text="Colocar no carrinho" TextColor="Red" VerticalOptions="CenterAndExpand"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
