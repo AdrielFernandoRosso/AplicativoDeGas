@@ -33,10 +33,10 @@ Este aplicativo foi feito para interação do Usuario, não ha interação do ve
    2.<b> Configurando Smartphone Android (Opção2):</b>
 
 <ul>
-    <li>E necessario deixar seu SmartFone em <b>modo desenvolvimento</b>.
+    <li>E necessario deixar seu Smartphone em <b>modo desenvolvimento</b>.
     <li>Nas opções do modo desenvolvimento basta habilitar <b>USBDebug</b>.
-    <li>Fazer conexão do seu SmartFone e Desktop por <b>porta USB</b>
-    <li>Se apos isso não aparecer seu SmartFone na aba para compilacao, sera necessario baixar o drive disponibilzado pela <b>empresa/marca</b> do Smartphone.
+    <li>Fazer conexão do seu Smartphone e Desktop por <b>porta USB</b>
+    <li>Se apos isso não aparecer seu Smartphone na aba para compilacao, sera necessario baixar o drive disponibilzado pela <b>empresa/marca</b> do Smartphone.
 </ul>
 
 <b> Desenvolvido por: Adriel Fernando Rosso </b> <adriel_rosso@hotmail.com>
