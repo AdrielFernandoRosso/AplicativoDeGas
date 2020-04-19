@@ -30,7 +30,7 @@ Este aplicativo foi feito para interação do Usuario, não ha interação do ve
   <li>Abrir <b>Gerenciador SDK do Android</b> e instalar packages de acordo com a versão do android instalado no emulador.
 </ul>
   
-   2.<b> Configurando SmartFone Android (Opção2):</b>
+   2.<b> Configurando Smartphone Android (Opção2):</b>
 
 <ul>
     <li>E necessario deixar seu SmartFone em <b>modo desenvolvimento</b>.
